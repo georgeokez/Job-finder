@@ -1,1 +1,1 @@
-export const jobTypes = ["Full-time", "Part-time", "Remote"];
+export const jobTypes = ["Full-time", "Part-time", "Hybrid", "Remote"];
