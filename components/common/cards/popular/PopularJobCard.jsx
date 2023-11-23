@@ -1,9 +1,15 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
 
 import styles from "./popularjobcard.style";
-import { checkImageURL } from "../../../../utils";
+import { checkImageURL } from "../../../utils";
+
+import jobImage from "../../../../assets/images/job_img.png";
 
 const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
+  const handlePress = (item) => {
+    console.log(item);
+  };
+
   return (
     <TouchableOpacity
       style={styles.container(selectedJob, item)}
@@ -12,28 +18,22 @@ const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
       <TouchableOpacity style={styles.logoContainer(selectedJob, item)}>
         <Image
           source={{
-            uri: checkImageURL(item?.employer_logo)
+            uri: checkImageURL(item.employer_logo)
               ? item.employer_logo
-              : "https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg",
+              : "https://t4.ftcdn.net/jpg/05/13/72/29/360_F_513722905_SgxiGdjQZsdvP4ODmERsQGgW2bUwj1lT.jpg",
           }}
-          resizeMode='contain'
+          resizeMode="contain"
           style={styles.logoImage}
         />
       </TouchableOpacity>
       <Text style={styles.companyName} numberOfLines={1}>
         {item.employer_name}
       </Text>
-
       <View style={styles.infoContainer}>
         <Text style={styles.jobName(selectedJob, item)} numberOfLines={1}>
           {item.job_title}
         </Text>
-        <View style={styles.infoWrapper}>
-          <Text style={styles.publisher(selectedJob, item)}>
-            {item?.job_publisher} -
-          </Text>
-          <Text style={styles.location}> {item.job_country}</Text>
-        </View>
+        <Text style={styles.location}>{item.job_country}</Text>
       </View>
     </TouchableOpacity>
   );
