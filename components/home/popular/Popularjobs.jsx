@@ -20,8 +20,6 @@ const PopularJobs = () => {
     num_pages: "1",
   });
 
-  console.log("Data: ", data);
-
   const [selectedJob, setSelectedJob] = useState();
 
   const handleCardPress = (item) => {
@@ -45,7 +43,7 @@ const PopularJobs = () => {
           <Text>Something went wrong</Text>
         ) : (
           <FlatList
-            data={[1, 2, 3, 4, 5]}
+            data={data}
             renderItem={({ item }) => <PopularJobCard item={item} />}
             keyExtractor={(item) => item?.job_id}
             contentContainerStyle={{ columnGap: SIZES.medium }}
