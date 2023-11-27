@@ -1,19 +1,13 @@
-import { useState } from "react";
-import { View, ScrollView, SafeAreaView } from "react-native";
-import { Stack, useRouter } from "expo-router";
+import { useState } from 'react';
+import { View, ScrollView, SafeAreaView } from 'react-native';
+import { Stack, useRouter } from 'expo-router';
 
-import { COLORS, icons, images, SIZES } from "../constants";
-// import {
-//   //NearByJobs,
-//   //PopularJobs,
-//   ScreenHeaderBtn,
-//   //Welcome,
-// } from "../components";
+import { COLORS, icons, images, SIZES } from '../constants';
 
-import ScreenHeaderBtn from "../components/common/header/ScreenHeaderBtn";
-import NearByJobs from "../components/home/nearby/Nearbyjobs";
-import PopularJobs from "../components/home/popular/Popularjobs";
-import Welcome from "../components/home/welcome/Welcome";
+import ScreenHeaderBtn from '../components/common/header/ScreenHeaderBtn';
+import NearByJobs from '../components/home/nearby/Nearbyjobs';
+import PopularJobs from '../components/home/popular/Popularjobs';
+import Welcome from '../components/home/welcome/Welcome';
 
 const Home = () => {
   const router = useRouter();
@@ -25,13 +19,13 @@ const Home = () => {
           headerStyle: { backgroundColor: COLORS.lightWhite },
           headerShadowVisible: true,
           headerLeft: () => (
-            <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
+            <ScreenHeaderBtn iconUrl={icons.menu} dimension='60%' />
           ),
           headerRight: () => (
-            <ScreenHeaderBtn iconUrl={icons.location} dimension="100%" />
+            <ScreenHeaderBtn iconUrl={icons.location} dimension='100%' />
           ),
-          headerTitle: "Job Finder",
-          headerTitleAlign: "center",
+          headerTitle: 'Job Finder',
+          headerTitleAlign: 'center',
         }}
       />
       <ScrollView showsVerticalScrollIndicator={false}>
