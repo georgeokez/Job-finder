@@ -1,6 +1,6 @@
-import { View, Text } from "react-native";
+import { View, Text } from 'react-native';
 
-import styles from "./about.style";
+import styles from './about.style';
 
 const About = ({ info }) => {
   return (

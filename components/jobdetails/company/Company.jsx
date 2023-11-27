@@ -1,9 +1,9 @@
-import React from "react";
-import { View, Text, Image } from "react-native";
+import React from 'react';
+import { View, Text, Image } from 'react-native';
 
-import styles from "./company.style";
-import { icons } from "../../../constants";
-import { checkImageURL } from "../../../utils";
+import styles from './company.style';
+import { icons } from '../../../constants';
+import { checkImageURL } from '../../utils';
 
 const Company = ({ companyLogo, jobTitle, companyName, location }) => {
   return (
@@ -13,7 +13,7 @@ const Company = ({ companyLogo, jobTitle, companyName, location }) => {
           source={{
             uri: checkImageURL(companyLogo)
               ? companyLogo
-              : "https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg",
+              : 'https://t4.ftcdn.net/jpg/05/13/72/29/360_F_513722905_SgxiGdjQZsdvP4ODmERsQGgW2bUwj1lT.jpg',
           }}
           style={styles.logoImage}
         />
@@ -24,7 +24,7 @@ const Company = ({ companyLogo, jobTitle, companyName, location }) => {
       </View>
 
       <View style={styles.companyInfoBox}>
-        <Text style={styles.companyName}>{companyName} / </Text>
+        <Text style={styles.companyName}>{companyName} /</Text>
         <View style={styles.locationBox}>
           <Image
             source={icons.location}
