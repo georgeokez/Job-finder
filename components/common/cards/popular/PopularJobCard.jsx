@@ -3,11 +3,9 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import styles from "./popularjobcard.style";
 import { checkImageURL } from "../../../utils";
 
-import jobImage from "../../../../assets/images/job_img.png";
-
 const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
   const handlePress = (item) => {
-    console.log(item);
+    //TODO: Implement functionality later on
   };
 
   return (
