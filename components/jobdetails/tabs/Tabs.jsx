@@ -3,7 +3,6 @@ import { FlatList, View } from 'react-native';
 import TabButton from './TabButton';
 
 import styles from './tabs.style';
-import { SIZES } from '../../../constants';
 
 const Tabs = ({ tabs, activeTab, setActiveTab }) => {
   return (
