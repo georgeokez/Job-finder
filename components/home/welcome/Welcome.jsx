@@ -19,7 +19,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
 
   const onItemPress = (item) => {
     setActiveJobType(item);
-    //router.push(`/search/${item}`);
+    router.push(`/search/${item}`);
   };
 
   return (
