@@ -1,7 +1,7 @@
 import { Specifics } from '../../components';
 import { TABS } from '../../constants/tabs';
 
-const DisplayTabContent = (activeTab) => {
+export const displayTabContent = (data, activeTab) => {
   switch (activeTab) {
     case TABS.QUALIFICATIONS:
       return (
@@ -16,5 +16,3 @@ const DisplayTabContent = (activeTab) => {
       break;
   }
 };
-
-export default DisplayTabContent;
