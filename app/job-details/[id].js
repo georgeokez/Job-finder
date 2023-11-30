@@ -21,6 +21,7 @@ import {
 import { COLORS, icons, SIZES } from '../../constants';
 import { useFetch } from '../../hooks/useFetch';
 import { tabs } from '../../constants/tabs';
+import { displayTabContent } from './DisplayTabContent';
 
 const JobDetails = () => {
   const params = useGlobalSearchParams();
@@ -83,9 +84,18 @@ const JobDetails = () => {
                 activeTab={activeTab}
                 setActiveTab={setActiveTab}
               />
+
+              {displayTabContent(data, activeTab)}
             </View>
           )}
         </ScrollView>
+
+        <JobFooter
+          url={
+            data[0]?.job_google_link ??
+            'https://careers.google.com/jobs/results'
+          }
+        />
       </>
     </SafeAreaView>
   );
