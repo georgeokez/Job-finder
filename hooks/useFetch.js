@@ -1,8 +1,7 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import { RAPID_API_KEY } from '../components/utils';
 //import { RAPID_API_KEY } from "@env";
-
-const rapidApiKey = "f7fc7b61b1msh10152ca9281b4ebp145ce1jsn8d8eb575e87c";
 
 export const useFetch = (urlParam, userQuery) => {
   const [data, setData] = useState([]);
@@ -10,11 +9,11 @@ export const useFetch = (urlParam, userQuery) => {
   const [error, setError] = useState(null);
 
   const options = {
-    method: "GET",
+    method: 'GET',
     url: `https://jsearch.p.rapidapi.com/${urlParam}`,
     headers: {
-      "X-RapidAPI-Key": rapidApiKey,
-      "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
+      'X-RapidAPI-Key': RAPID_API_KEY,
+      'X-RapidAPI-Host': 'jsearch.p.rapidapi.com',
     },
     params: { ...userQuery },
   };
@@ -29,7 +28,7 @@ export const useFetch = (urlParam, userQuery) => {
       setIsLoading(false);
     } catch (error) {
       setError(error);
-      alert("An error occurred");
+      alert('An error occurred');
     } finally {
       setIsLoading(false);
     }
